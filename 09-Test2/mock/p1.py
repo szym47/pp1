@@ -1,7 +1,7 @@
 def f(player1,player2):
     p1= dict()
     for i in player1:
-        if i=='A' or i=='J' or i=='K' or i=='Q' or i=='T':
+        if i in ('A','K','Q','J','T'):
             p1[i] =p1.get(i,0)+10
         else:
             p1[i] =p1.get(i,0)+int(i)
@@ -15,5 +15,5 @@ def f(player1,player2):
         print('True')
     else:
         print('False')
-
+f("AJ972","AQT72") 
 f("9532","K8") 
