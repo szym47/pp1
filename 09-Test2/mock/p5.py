@@ -6,5 +6,8 @@ def f(first_letter,last_letter):
         for word in words:
             if (word.lower()).startswith(first_letter) and (word.lower()).endswith(last_letter):
                 count += 1
-    print(count)
-f("w","d") 
+    return(count)
+
+
+if __name__== '__main__':
+    print(f("w","d"))

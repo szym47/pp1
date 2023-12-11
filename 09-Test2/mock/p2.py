@@ -5,4 +5,7 @@ def f(arr):
     for key, count in a.items():
         if count == 1:
             return key
-print(f([7,7,7,7,7,5,7,7])) 
+        
+
+if __name__== '__main__':
+    print(f(([7,7,7,7,7,7,7,5])))
