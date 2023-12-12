@@ -1,13 +1,9 @@
+import re
 def f(first_letter,last_letter):
-    count=0
-    with open('data.txt', 'r', encoding='UTF-8') as file:
-        content = file.read()
-        words= content.split()
-        for word in words:
-            if (word.lower()).startswith(first_letter) and (word.lower()).endswith(last_letter):
-                count += 1
-    return(count)
-
+    with open('data.txt','r', encoding='utf-8')as f:
+        f_content=f.read()
+        list_of_words=re.findall(fr'\b{first_letter}\w+{last_letter}\b',f_content)
+        return len(list_of_words)
 
 if __name__== '__main__':
     print(f("w","d"))
