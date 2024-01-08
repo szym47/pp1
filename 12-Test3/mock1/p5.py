@@ -6,13 +6,13 @@
 # •	__str__ - returns a string representation of the counter value
 # Example:
 # c=C(5)
-# c.m1()  5
+# c.m1() -> 5
 # c.m2()
-# c.m1()  6
+# c.m1() -> 6
 # c.m4(-8)
-# c.m1()  -2
+# c.m1() -> -2
 # c.m3()
-# c.m1()  -3
+# c.m1() -> -3
 # c.m4(10)
-# c.m1()  7
-# c.__str__()  "7"
+# c.m1() -> 7
+# c.__str__() -> "7"
