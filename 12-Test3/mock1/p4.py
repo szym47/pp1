@@ -6,13 +6,25 @@
 # f(fnc2,prods) -> "WR,CE,TO"
 
 
-def f(fnc,prods):
-    x=prods
-    return fnc
+def f(fnc, prods):
+    x = list(map(fnc, prods))
+    string = ''
+    for item in x:
+        string += item + ','
+        
+    return string
 
-print()
-print()
-print()
-print()
-print()
-print()
+# Define lambda function separately
+fnc1 = lambda x: "id:" + x[:2]
+prods = ["water", "cheese", "tomato"]
+
+# Call the function with the defined lambda function and prods
+result1 = f(fnc1, prods)
+print(result1)
+
+# Define another lambda function separately
+fnc2 = lambda x: (x[0] + x[-1]).upper()
+
+# Call the function with the second defined lambda function and prods
+result2 = f(fnc2, prods)
+print(result2)

@@ -16,3 +16,32 @@
 # c.m4(10)
 # c.m1() -> 7
 # c.__str__() -> "7"
+
+class C():
+    def __init__(self,initial):
+        self.initial = initial
+    def m1(self):
+        print(self.initial) 
+    def m2(self):
+        self.initial +=1
+    def m3(self):
+        self.initial -=1
+    def m4(self,value):
+        if value>0:
+            self.initial-=value
+        else:
+            self.initial+=value
+    def __str__(self):
+        return self.initial
+
+c=C(5)
+c.m1()
+c.m2()
+c.m1()
+c.m4(-8)
+c.m1()
+c.m3()
+c.m1()
+c.m4(10)
+c.m1()
+c.__str__()
