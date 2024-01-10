@@ -8,11 +8,7 @@
 
 def f(fnc, prods):
     x = list(map(fnc, prods))
-    string = ''
-    for item in x:
-        string += item + ','
-        
-    return string
+    return ",".join(x)
 
 # Define lambda function separately
 fnc1 = lambda x: "id:" + x[:2]
